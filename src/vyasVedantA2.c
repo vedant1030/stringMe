@@ -197,26 +197,26 @@ void tail (char * aString, int whichWord, char * desiredSuffix)
 
 	            //check if the current word is the one we want to process.
 	            if (whichWord == numWords) 
-                { 
+                    { 
 	                //loop through the current word in reverse order.
 	                for (int j = i; j >= 0; j--) 
-                    { 
+                        { 
 	                    //check if the current character is a delimiter.
 	                    if (aString[j] == ' ' || aString[j] == '\n' || aString[j] == '.' || aString[j] == ':' || aString[j]== ';' || aString[j] == '?' || aString[j] == '!' || aString[j] == ',') 
-                        { 
+                            { 
 	                        //do nothing.
 	                    }
 	                    else 
-                        { 
+                            { 
 	                        length++; //increment the length of the current word.
 
 	                        //allocate memory for the current word.
 	                        if (length == 1) 
-                            { 
+                                { 
 		                        word = calloc(length, sizeof(char));
 	                        }
 	                        else 
-                            { 
+                                { 
 		                        word = realloc(word, sizeof(char)*(length));
 	                        }
 
@@ -225,7 +225,7 @@ void tail (char * aString, int whichWord, char * desiredSuffix)
 
 	                    //check if the previous character is also a whitespace or end of line character.
 	                    if (aString[j-1] == ' ' || aString[j-1] == '\n') 
-                        { 
+                            { 
 	                        break; //exit the loop.
 	                    }
 	                }
