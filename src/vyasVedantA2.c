@@ -33,7 +33,7 @@ char * readFile (char * filename)
     }
 }
 
-void dejaVu (char *aString, int *numWords, int *numSentences) 
+void dejaVu (char * aString, int * numWords, int * numSentences) 
 {
     int numChars = 0; //initialize a counter for the number of characters in a word.
     *numWords = 0; //initialize the number of words to 0.
